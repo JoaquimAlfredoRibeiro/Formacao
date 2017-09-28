@@ -12,4 +12,18 @@ public class ProxyTest {
         Assert.assertEquals(image.getfileName(), "test_10mb.jpg");
     }
 
+    @Test
+    public void realImageDisplay(){
+        Image image = new RealImage("test_10mb.jpg");
+
+        Assert.assertEquals(image.display(), "Displaying test_10mb.jpg");
+    }
+
+    //3 image.get(realImage) |= null
+    @Test
+    public void realImageDisplayNotNull(){
+        Image image = new RealImage("test_10mb.jpg");
+
+        Assert.assertNotNull(image);
+    }
 }

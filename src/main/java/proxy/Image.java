@@ -1,5 +1,7 @@
 package proxy;
 
 public interface Image {
-	   void display();
+	   String display();
+
+	   String getfileName();
 	}
