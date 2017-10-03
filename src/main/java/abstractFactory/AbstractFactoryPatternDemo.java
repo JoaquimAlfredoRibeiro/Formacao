@@ -44,5 +44,13 @@ public class AbstractFactoryPatternDemo {
 
 	      //call fill method of Color Blue
 	      color3.fill();
+
+	      AbstractFactory lineFactory = FactoryProducer.getFactory("LINE");
+
+	      Line line1 = lineFactory.getLine("SOLID");
+	      line1.drawLine();
+
+	      Line line2 = lineFactory.getLine("DASHED");
+	      line2.drawLine();
 	   }
 	}
