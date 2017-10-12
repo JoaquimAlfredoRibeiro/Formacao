@@ -13,7 +13,11 @@ public class CompositePatternDemo {
 
         Employee clerk1 = new Employee("Laura", "Marketing", 10000);
         Employee clerk2 = new Employee("Bob", "Marketing", 10000);
-        Employee cleanLady = new Employee("Alice", "Clean", 10000);
+        Employee clerk3 = new Employee("Jonas", "Marketing", 10000);
+        Employee clerk4 = new Employee("Manel", "Marketing", 10000);
+        Employee cleanLady1 = new Employee("Alice", "Clean", 10000);
+
+        Employee cleanLady2 = new Employee("Joana", "Clean", 10000);
 
 
         Employee salesExecutive1 = new Employee("Richard", "Sales", 10000);
@@ -28,9 +32,10 @@ public class CompositePatternDemo {
         headMarketing.add(clerk1);
         headMarketing.add(clerk2);
 
-        clerk1.add(cleanLady);
+        clerk2.add(cleanLady1);
+        cleanLady1.add(cleanLady2);
 
-        System.out.println(findByName(CEO, "Richard"));
+        System.out.println(findByName(CEO, "Joana"));
 
     }
 
